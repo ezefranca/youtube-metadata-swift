@@ -37,20 +37,18 @@ req.getMetadata(for: vid) { metadata in
 ```
 
 ```swift
-public struct YTMetadataRequester {
-
-    // MARK: -Metadata
-    struct Metadata: Codable {
-        let authorName: String
-        let authorURL: String
-        let height: Int
-        let html, providerName: String
-        let providerURL: String
-        let thumbnailHeight: Int
-        let thumbnailURL: String
-        let thumbnailWidth: Int
-        let title, type, version: String
-        let width: Int
+// MARK: -Metadata
+struct Metadata: Codable {
+    let authorName: String
+    let authorURL: String
+    let height: Int
+    let html, providerName: String
+    let providerURL: String
+    let thumbnailHeight: Int
+    let thumbnailURL: String
+    let thumbnailWidth: Int
+    let title, type, version: String
+    let width: Int
 }
 ```
 
