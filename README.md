@@ -54,7 +54,7 @@ struct Metadata: Codable {
 
 ## How to use
 
-You can use [that code](https://github.com/ezefranca/youtube-metadata-swift/blob/main/youtube-metadata.playground/Contents.swift) directly or get the ideia to use with your own Internet Lib (Alamofire, etc). It's a simple `GET` request to the `embedded` youtube URL.
+You can use [this code](https://github.com/ezefranca/youtube-metadata-swift/blob/main/youtube-metadata.playground/Contents.swift) directly or get the ideia to use with your own Internet Lib (Alamofire, etc). It's a simple `GET` request to the `embedded` youtube URL.
 
 ## Related
 
