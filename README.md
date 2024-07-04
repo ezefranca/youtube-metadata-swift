@@ -1,4 +1,4 @@
-# youtube-metadata-swift
+# youtube-metadata-swift [![Swift](https://github.com/ezefranca/youtube-metadata-swift/actions/workflows/swift.yml/badge.svg)](https://github.com/ezefranca/youtube-metadata-swift/actions/workflows/swift.yml)
 > Get YouTube metadata without YouTube API
 
 `youtube-metadata-swift` is a Swift package and command-line tool for fetching metadata of YouTube videos.
