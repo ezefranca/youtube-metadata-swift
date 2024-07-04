@@ -17,7 +17,7 @@ To use `youtube-metadata-swift` as a dependency in your Swift project, add the f
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/yourusername/youtube-metadata-swift.git", from: "1.0.0")
+    .package(url: "https://github.com/ezefranca/youtube-metadata-swift.git", from: "1.0.0")
 ],
 targets: [
     .target(
