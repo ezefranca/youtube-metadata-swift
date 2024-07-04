@@ -1,18 +1,73 @@
 # youtube-metadata-swift
-Get YouTube metadata without YouTube API
+> Get YouTube metadata without YouTube API
 
+`youtube-metadata-swift` is a Swift package and command-line tool for fetching metadata of YouTube videos.
+
+## Features
+
+- Fetch metadata for YouTube videos.
+- Display the title, author, and thumbnail URL of a video.
+- Command-line interface with usage instructions.
+
+## Installation
+
+### Swift Package
+
+To use `youtube-metadata-swift` as a dependency in your Swift project, add the following to your `Package.swift`:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/yourusername/youtube-metadata-swift.git", from: "1.0.0")
+],
+targets: [
+    .target(
+        name: "YourTarget",
+        dependencies: ["YTMetadataRequesterLib"]),
+]
+```
+
+### Command-Line Tool
+
+To install the command-line tool, you can use the provided `install.sh` script:
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/youtube-metadata-swift.git
+    cd youtube-metadata-swift
+    ```
+
+2. Run the install script:
+    ```bash
+    ./install.sh
+    ```
+
+This will build the tool and copy it to `/usr/local/bin`.
+
+## Usage
+
+### Command-Line Tool
+
+To fetch metadata for a YouTube video, run:
+
+```bash
+ytmeta <YouTube URL>
+```
 
 ## How to get a video metadata from url
 
 ```swift
 
-let vid = "https://youtu.be/TRqiFPpw2fY"
-let req = YTMetadataRequester()
-req.getMetadata(for: vid) { metadata in
-    print(metadata)
-} failed: { error in
-    print(error.debugDescription)
-}
+    func getMetadata() async {
+        let vid = "https://youtu.be/TRqiFPpw2fY"
+        let req = YTMetadataRequester()
+
+        do {
+            let metadata = try await req.getMetadata(for: vid)
+            print("Title: \(metadata.title)")
+        } catch {
+            print("Failed to fetch metadata: \(error.localizedDescription)")
+        }
+    }
 
 ```
 
@@ -52,16 +107,11 @@ struct Metadata: Codable {
 }
 ```
 
-## How to use
-
-You can use [this code](https://github.com/ezefranca/youtube-metadata-swift/blob/main/youtube-metadata.playground/Contents.swift) directly or get the ideia to use with your own Internet Lib (Alamofire, etc). It's a simple `GET` request to the `embedded` youtube URL.
-
 ## Related
 
 A [npm module with the same purpose](https://github.com/ezefranca/youtube-metadata-from-url) 
 
 ## License
 
-This project is provided for educational purposes only. It is not affiliated with and has
-not been approved by Youtube.
+This project is provided for educational purposes only. It is not affiliated with and has not been approved by Youtube.
 
