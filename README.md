@@ -32,7 +32,7 @@ To install the command-line tool, you can use the provided `install.sh` script:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/youtube-metadata-swift.git
+    git clone https://github.com/ezefranca/youtube-metadata-swift.git
     cd youtube-metadata-swift
     ```
 
